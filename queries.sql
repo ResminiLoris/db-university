@@ -9,12 +9,11 @@ FROM `courses`
 WHERE `cfu` > 10;
 
 -- Selezionare tutti gli studenti che hanno più di 30 anni--
---SELECT * FROM `students` WHERE YEAR(`date_of_birth`) < (YEAR(CURDATE()) - 30)--
 SELECT * 
-FROM `students`
-WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`,CURDATE()) > 30;
+FROM `students` 
+WHERE YEAR(`date_of_birth`) < (YEAR(CURDATE()) - 30);
 
 --oppure--
 SELECT * 
 FROM `students` 
-WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`,CURDATE()) > 30;
+WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`,CURDATE()) > 30; 
