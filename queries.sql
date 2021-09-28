@@ -33,4 +33,9 @@ SELECT *
 FROM `courses` 
 WHERE `period`='I semestre' AND `year` = 1;
 
+--Da quanti dipartimenti è composta l'università? (12)--
+SELECT COUNT(name) 
+FROM departments;
+
+
 
